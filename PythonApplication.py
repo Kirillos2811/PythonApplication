@@ -1,2 +1,6 @@
-print("Введите вид, кличку и возраст питомца")
-print("Это", input(), "по кличке", input() + ".", "Возраст:", input(), "лет")
+a = float(input("a = "))
+b = float(input("b = "))
+perimeter = a * 2 + b * 2
+area = a * b
+print("perimeter =", perimeter)
+print("area =", area)
