@@ -1,5 +1,8 @@
-string = input()
-if string == string[::-1]:
-    print("yes")
-else:
-    print("no")
+n = int(input())
+arr = []
+
+for i in range(n):
+    arr.append(int(input()))
+
+arr.reverse()
+print(*arr)
