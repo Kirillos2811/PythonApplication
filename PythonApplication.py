@@ -1,8 +1,4 @@
 n = int(input())
-arr = []
+arr = list(map(float, input().split(" ")))
 
-for i in range(n):
-    arr.append(int(input()))
-
-arr.reverse()
-print(*arr)
+print(len(set(arr)))
