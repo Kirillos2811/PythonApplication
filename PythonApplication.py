@@ -10,9 +10,11 @@ pet_data[pet_name]["owner_name"] = owner_name
 pet_data[pet_name]["species"] = species
 
 for pet_name in pet_data.keys():
-    if pet_data[pet_name]["age"] % 10 == 1:
+    if 11 <= pet_data[pet_name]["age"] % 100 <= 14:
+        prefix = "лет"
+    elif pet_data[pet_name]["age"] % 10 == 1:
         prefix = "год"
-    elif pet_data[pet_name]["age"] % 10 < 5:
+    elif 1 < pet_data[pet_name]["age"] % 10 < 5:
         prefix = "года"
     else:
         prefix = "лет"
