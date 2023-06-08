@@ -1,22 +1,12 @@
-pet_name = input("name = ")
-owner_name = input("owner_name = ")
-age = int(input("age = "))
-species = input("species = ")
+def factorial(a):
+    res = 1
+    for i in range(1, a + 1):
+        res *= i
+    return res
 
-pet_data = {}
-pet_data[pet_name] = {}
-pet_data[pet_name]["age"] = age
-pet_data[pet_name]["owner_name"] = owner_name
-pet_data[pet_name]["species"] = species
+a = int(input())
+lst = []
+for i in reversed(range(1, factorial(a) + 1)):
+    lst.append(factorial(i))
 
-for pet_name in pet_data.keys():
-    if 11 <= pet_data[pet_name]["age"] % 100 <= 14:
-        prefix = "лет"
-    elif pet_data[pet_name]["age"] % 10 == 1:
-        prefix = "год"
-    elif 1 < pet_data[pet_name]["age"] % 10 < 5:
-        prefix = "года"
-    else:
-        prefix = "лет"
-    print(f'''Это {pet_data[pet_name]['species']} по кличке "{pet_name}".'''
-            + f'''Возраст питомца: {pet_data[pet_name]['age']} {prefix}. Имя владельца: {pet_data[pet_name]['owner_name']}''')
+print(lst)
