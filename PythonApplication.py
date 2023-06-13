@@ -1,9 +1,15 @@
-def print_list(index, lst):
-    print(lst[index], end=" ")
-    if index == len(lst) - 1:
-        print("Конец списка")
-    else:
-        print_list(index + 1, lst)
+class Transport:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
 
-my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-print_list(0, my_list)
+class Autobus(Transport):
+    def __init__(self, name, max_speed, mileage):
+        super().__init__(name, max_speed, mileage)
+
+    def __str__(self):
+        return f"Название автомобиля: {self.name} Скорость: {self.max_speed} Пробег: {self.mileage}"
+
+autobus = Autobus("Mini Van", 150, 15)
+print(autobus)
